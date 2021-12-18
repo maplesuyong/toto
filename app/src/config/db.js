@@ -1,9 +1,9 @@
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-    user : 'root',
-    password : '111111',
-    database : 'toto', 
+    user : process.env.DB_USER,
+    password : process.env.DB_PW,
+    database : process.env.DB_DATABASE,
 });
 
 db.connect();
